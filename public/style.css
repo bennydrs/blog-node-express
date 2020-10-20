@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+p,
+h1,
+h2,
+h3,
+a,
+ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #222;
+}
+
+/* nav & footer styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  padding: 0 80px;
+  text-transform: uppercase;
+  background-color: teal;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav li {
+  list-style-type: none;
+  margin-left: 20px;
+}
+nav h1 {
+  font-size: 2em;
+  color: #eee;
+}
+nav a {
+  color: #eee;
+  font-weight: 300;
+}
+footer {
+  color: #777;
+  text-align: center;
+  margin: 0 auto;
+  height: 50px;
+}
+h3 {
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+.content {
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 1200px;
+  height: calc( 100vh - 100px );
+}
+
+/* index styles */
+.blogs a {
+  display: block;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 6px solid teal;
+}
+.blogs a:hover h3 {
+  color: teal;
+}
+
+/* details styles */
+.details {
+  position: relative;
+}
+.delete {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  padding: 5px;
+}
+.delete:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+/* create styles */
+.create-blog form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.create-blog input,
+.create-blog textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  outline: none;
+}
+.create-blog input:focus,
+.create-blog textarea:focus {
+  border: 2px solid teal;
+}
+.create-blog label {
+  display: block;
+  margin-top: 24px;
+}
+textarea {
+  height: 120px;
+}
+.create-blog button {
+  margin-top: 20px;
+  background: teal;
+  color: white;
+  padding: 6px;
+  border: 0;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+}
+
+.content-body {
+  margin-top: 10px;
+  line-height: 1.5rem;
+}

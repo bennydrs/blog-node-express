@@ -2,8 +2,27 @@
 
 <%- include('../partials/nav.ejs') %>
   
-  <div class="blogs content">
-    <h1>Show</h1>
-  </div>
+    <div class="details content">
+      <h2><%= blog.title %></h2>
+      <div class="content-body">
+        <p><%= blog.body %></p>
+      </div>
+      <a class="delete" data-doc="<%= blog._id %>">
+        <img src="/trashcan.svg" alt="delete icon">
+      </a>
+    </div>
   
 <%- include('../partials/footer.ejs') %>
+
+<script>
+  const deleteIcon = document.querySelector('a.delete');
+  deleteIcon.addEventListener('click', (e) => {
+    const endpoint = `/blogs/${deleteIcon.dataset.doc}`;
+    fetch(endpoint, {
+      method: 'DELETE',
+    })
+    .then(response => response.json())
+    .then(data => window.location.href = data.redirect)
+    .catch(err => console.log(err));
+  });
+</script>
