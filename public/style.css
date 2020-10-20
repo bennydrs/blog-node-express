@@ -83,11 +83,19 @@ h3 {
   position: absolute;
   top: 35px;
   right: 0;
-  padding: 5px;
 }
 .delete:hover {
   cursor: pointer;
-  background-color: red;
+  color: red;
+}
+.edit {
+  position: absolute;
+  top: 35px;
+  right: 30px;
+}
+.edit:hover {
+  cursor: pointer;
+  color: green;
 }
 
 /* create styles */

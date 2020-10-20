@@ -7,8 +7,11 @@
       <div class="content-body">
         <p><%= blog.body %></p>
       </div>
+      <a href="/blogs/edit/<%= blog._id %>" class="edit">
+        <i class="fas fa-pencil-alt"></i>
+      </a>
       <a class="delete" data-doc="<%= blog._id %>">
-        <img src="/trashcan.svg" alt="delete icon">
+        <i class="fas fa-trash"></i>
       </a>
     </div>
   
